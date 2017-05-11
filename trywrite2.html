@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  <style>
+  
+    #btn{
+        width: 200px;
+        height: 200px;
+
+        background: red;
+    }
+  </style>
+
+</head>
+<body>
+    
+    <div id='btn'></div>
+</body>
+</html>
+
+<script>    
+
+    var c1=function(){
+        console.log('事件1')
+    }
+    var c2=function(){
+        console.log('事件2')
+    }
+    var c3=function(){
+        console.log('事件3')
+    }
+
+    window.onload=function(){
+var b=document.getElementById('btn')
+
+b.addEventListener('click',c1);
+
+b.addEventListener('click',c2);
+
+
+b.addEventListener('click',c3);
+
+
+
+    }
+
+</script>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style> 
+    #yuanEvent{
+        width: 100px;
+        height: 50px;
+        background: red;
+    }
+
+      #yuanEvent1{
+        width: 100px;
+        height: 50px;
+        background:blue;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id='yuanEvent'>没有监听，点击触发事件</div>
+
+    <div id='yuanEvent1'>添加了监听，点击触发事件</div>
+    
+
+
+</body>
+</html>
+<script>    
+
+
+window.onload = function(){ 
+ var btn = document.getElementById("yuanEvent"); 
+ btn.onclick = function(){ 
+  alert("第一个事件"); 
+ } 
+ btn.onclick = function(){ 
+  alert("第二个事件"); 
+ } 
+ btn.onclick = function(){ 
+  alert("第三个事件"); 
+ } 
+}
+
+
+
+
+
+
+
+var eventOne = function(){ 
+ alert("第一个监听事件"); 
+} 
+function eventTwo(){ 
+ alert("第二个监听事件"); 
+} 
+function eventT(){ 
+ alert("第三个监听事件"); 
+} 
+window.onload = function(){ 
+ var btn = document.getElementById("yuanEvent1"); 
+ //addEventListener：绑定函数 
+ btn.addEventListener("click",eventOne); 
+ btn.addEventListener("click",eventTwo);
+ btn.addEventListener("click",eventT); 
+  
+}
+
+
+
+
+
+
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+ <style>
+ #div1{
+     width: 50px;
+     height: 50px;
+     background: yellow;
+ }
+ 
+ </style>
+
+</head>
+<body>
+
+    <div id='div1'>点击</div>
+</body>
+</html>
+
+<script>    
+   var click1=function(){
+       alert('点击事件1')
+   }
+   var click2=function(){
+       alert('点击事件2')
+   }
+
+   window.onload=function(){
+var btn=document.getElementById('div1')
+
+
+// btn.addEventListener('mouseover',click2);
+// btn.addEventListener('mousemove',click1);
+
+// btn.addEventListener('mouseout',click2);
+
+// btn.addEventListener('mousedown',click2);
+// btn.addEventListener('mouseenter',click2);
+btn.addEventListener('mouseleave',click2);
+
+
+
+
+
+
+   }
+  
+
+</script>
